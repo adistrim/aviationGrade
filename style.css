@@ -78,6 +78,9 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+    button {
+        padding: 10px 18px;
+    }
     .card {
         flex-direction: column;
     }
