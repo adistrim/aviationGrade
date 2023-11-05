@@ -1,130 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- Local CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviation Grade</title>
     <link rel="stylesheet" href="style.css">
-
-    <title>Hello, world!</title>
 </head>
-
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">aviationGRADE</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mr-2">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/adistrim" target="_blank">code</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        List of Aircrafts
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Rafale</a>
-                        <a class="dropdown-item" href="#">Su30 MKI</a>
-                        <a class="dropdown-item" href="#">F22 Raptor</a>
-                        <a class="dropdown-item" href="#">F35 A</a>
-                        <a class="dropdown-item" href="#">Mig 29 UPG</a>
-                        <a class="dropdown-item" href="#">F15</a>
-                        <a class="dropdown-item" href="#">F14 Tomcat</a>
-                        <a class="dropdown-item" href="#">Mig 25 Foxbat</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+    <header>
+        <h1>Aviation Grade</h1>
+    </header>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for an aircraft...">
+            <button id="searchButton">Search</button>
         </div>
-    </nav>
-
-
-    <div id="carouselExampleCaptions" style="margin: 10vh 3vw 0 3vw;" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="image-container aspect-ratio-4x3">
-                    <img src="source/a10.jpg" class="cropped-image d-block w-100" alt="...">
-                </div>
-
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>A-10 Thunderbolt II</h5>
-                    <p>Explore the advanced capabilities of the A-10 Thunderbolt II.</p>
+        <div class="cards">
+            <div class="card">
+                <img src="source/a10.jpg" alt="Aircraft 1 Image">
+                <div>
+                    <h2>Fairchild Republic A-10 Thunderbolt II</h2> 
+                    <p>Commonly known as the "Warthog," is a legendary close air support aircraft in the United States Air Force inventory. Designed for the sole purpose of providing effective support to ground troops, it is renowned for its durability and firepower. With its distinctive twin-engine design and a fearsome Gatling gun, the A-10 has earned a reputation as a formidable combat aircraft. Its impressive combat record and iconic appearance make it a beloved symbol of American air power.</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="image-container aspect-ratio-4x3">
-                    <img src="source/b747.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Boeing 747</h5>
-                    <p>Discover the exceptional features of the Boeing 747 jumbo jet.</p>
+            <div class="card">
+                <img src="source/f22.jpg" alt="Aircraft 1 Image">
+                <div>
+                    <h2>Lockheed Martin F-22 Raptor</h2> 
+                    <p>Raptor is a pinnacle of modern air superiority, regarded as one of the world's most advanced fighter aircraft. With its stealth technology and exceptional maneuverability, the F-22 represents the cutting edge of aerial combat capability. Designed for the United States Air Force, this formidable fighter is renowned for its ability to dominate the skies and maintain air superiority in the most challenging environments. The F-22 Raptor's combination of speed, agility, and stealth make it a true icon of 21st-century aviation.</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="image-container aspect-ratio-4x3">
-                    <img src="source/f22.jpg" class="d-block w-100" alt="...">
+            <div class="card">
+                <img src="source/f35.jpg" alt="Aircraft 1 Image">
+                <div>
+                    <h2>Lockheed Martin F-35 Lightning II</h2> 
+                    <p>F35 is a revolutionary fifth-generation multirole fighter aircraft, designed for the United States and its allies. It is renowned for its versatility, seamlessly transitioning between air-to-air combat, ground attack, and reconnaissance missions. With its advanced stealth capabilities and cutting-edge technology, the F-35 sets new standards for modern warfare, offering superior situational awareness and combat effectiveness. As a cornerstone of military aviation, the F-35 is poised to shape the future of aerial combat.</p>
                 </div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>F-22 Raptor</h5>
-                    <p>Learn about the capabilities of the F-22 Raptor air-superiority fighter.</p>
+            </div>
+            <div class="card">
+                <img src="source/su57.jpg" alt="Aircraft 1 Image">
+                <div>
+                    <h2>Sukhoi Su-57</h2> 
+                    <p>Su-57 is a fifth-generation Russian stealth fighter aircraft, representing the pinnacle of Russian military aviation technology. It combines advanced stealth features, agility, and supersonic speed to excel in air superiority and ground attack roles. With its cutting-edge avionics and weaponry, the Su-57 is a formidable asset in the evolving landscape of modern warfare. As one of Russia's flagship fighter aircraft, the Su-57 is a symbol of its commitment to maintaining air superiority.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="source/eurofighterTyphoon.jpg" alt="Aircraft 1 Image">
+                <div>
+                    <h2>Eurofighter Typhoon</h2> 
+                    <p>Eurofighter Typhoon is a multi-role fighter aircraft developed by a consortium of European nations, including the UK, Germany, Italy, and Spain. Known for its agility and advanced avionics, the Typhoon is designed to excel in both air-to-air and air-to-ground missions. With its adaptability and cutting-edge technology, the Eurofighter Typhoon stands as a testament to European collaboration in producing a top-tier fighter aircraft, capable of securing air superiority and conducting precision strikes.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="source/f15.jpg" alt="Aircraft 1 Image">
+                <div>
+                    <h2>McDonnell Douglas F-15 Eagle</h2> 
+                    <p>F-15 is a legendary American fighter aircraft renowned for its exceptional air superiority capabilities. First introduced in the 1970s, the F-15 has maintained a stellar combat record and continues to serve as a cornerstone of the U.S. Air Force's arsenal. With its impressive speed, maneuverability, and firepower, the F-15 Eagle remains a symbol of American air power and excellence in aerial combat.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="source/f16.jpg" alt="Aircraft 1 Image">
+                <div>
+                    <h2>General Dynamics F-16 Fighting Falcon</h2> 
+                    <p>F-16, often referred to simply as the "Viper," is a highly versatile and widely-used American multi-role fighter aircraft. Introduced in the late 1970s, the F-16 has become a staple of air forces worldwide, known for its agility and adaptability. With a reputation for exceptional performance in air-to-air and air-to-ground missions, the F-16 Fighting Falcon has consistently proven its effectiveness and remains a critical asset in modern air combat.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="source/j20.jpg" alt="Aircraft 1 Image">
+                <div>
+                    <h2>Chengdu J-20</h2> 
+                    <p>J-20 is a fifth-generation stealth fighter aircraft developed by China. Introduced in the 2010s, it represents China's ambition to compete on the global stage of advanced military aviation. With its stealth capabilities, agility, and advanced avionics, the J-20 is a symbol of China's technological advancement in the realm of aerial combat, signaling its emergence as a significant player in the international aerospace arena.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="source/rafale.jpg" alt="Aircraft 1 Image">
+                <div>
+                    <h2>Dassault Rafale</h2> 
+                    <p>Rafale is a versatile and advanced French multi-role fighter aircraft, known for its exceptional performance in air-to-air and air-to-ground missions. Developed in the late 20th century, it has since become a cornerstone of French and allied air forces. With its agility, advanced avionics, and adaptability, the Rafale showcases France's commitment to maintaining air superiority and its capability to conduct precision strikes.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="source/gripen.jpg" alt="Aircraft 1 Image">
+                <div>
+                    <h2>Saab JAS 39 Gripen</h2> 
+                    <p>Gripen is a highly adaptable and cost-effective Swedish multi-role fighter aircraft, renowned for its maneuverability and technological innovation. Introduced in the late 20th century, it has become a key asset for the Swedish Air Force and other nations worldwide. With its advanced avionics and ease of maintenance, the Gripen symbolizes Sweden's commitment to modern air defense and a strong emphasis on affordability and efficiency in aerial operations.</p>
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" ariahidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
 
+    <div class="footer">
+        <p>&copy; 2023 adistrim. All rights reserved. | Created by adistrim &ndash; <a href="https://github.com/adistrim/aviationGrade" target="_blank">View Source Code</a></p>
+    </div>
 
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
