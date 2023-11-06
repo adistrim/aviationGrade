@@ -1,6 +1,11 @@
-# aviationGRADE
+# Aviation Grade
 
-This webpage serves as an area where every aircraft has it's own space. As I'll get more time I'll keep adding more stuff here.
+Aviation Grade is a web-based platform that provides comprehensive information about a wide range of modern aircraft, including both military and civil aviation. This project aims to serve as a valuable resource for aviation enthusiasts, students, and anyone interested in learning more about the incredible world of aviation.
+
+### Features
+- Aircraft Database: Access detailed information about various aircraft, including their names, descriptions, and images.
+
+- Search Functionality: Easily search for a specific aircraft using the search bar on the homepage.
 
 ### Why I'm working on this?
 
