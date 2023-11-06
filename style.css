@@ -113,6 +113,9 @@ button:hover {
     .card {
         flex-direction: column;
     }
+    .content {
+        flex-direction: column;
+    }
 
     .card img {
         max-width: 100%;
