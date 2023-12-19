@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aviation Grade
 
-## Getting Started
+Aviation Grade is a web-based platform that provides comprehensive information about a wide range of modern aircraft, including both military and civil aviation. This project aims to serve as a valuable resource for aviation enthusiasts, students, and anyone interested in learning more about the incredible world of aviation.
 
-First, run the development server:
+### Features
+- Aircraft Database: Access detailed information about various aircraft, including their names, descriptions, and images.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Search Functionality: Easily search for a specific aircraft using the search bar on the homepage.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Why I'm working on this?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Since, I'm a aviation fan who really loves to know more and more about aircrafts especially military aircrafts.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the [MIT License](https://www.mit.edu/~amini/LICENSE.md).
