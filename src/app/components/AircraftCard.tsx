@@ -12,8 +12,8 @@ const AircraftCard: React.FC<AircraftCardProps> = ({ imageSrc, aircraftName, des
       <div className="flex">
         <img className="max-w-[30%] h-auto mr-5" src={`/source/${imageSrc}`} alt={`${aircraftName} Image`}/>
         <div>
-          <h2 className="m-0 text-xl font-bold">{aircraftName}</h2>
-          <p>{description}</p>
+          <h2 className="m-0 text-2xl font-bold">{aircraftName}</h2>
+          <p className='mt-4 leading-5'>{description}</p>
         </div>
       </div>
     </div>
