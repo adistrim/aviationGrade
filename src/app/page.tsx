@@ -8,6 +8,7 @@ import Pagination from './components/Pagination';
 import aircaftData from './data.json';
 
 const aircraftData = aircaftData;
+const allAircraftIds = aircaftData.map((aircraft) => aircraft.id);
 
 const Home = () => {
   const cardsPerPage = 10;
@@ -15,6 +16,7 @@ const Home = () => {
   const totalPages = Math.ceil(aircraftData.length / cardsPerPage);
   const containerRef = useRef<HTMLDivElement>(null);
   const [matchingIds, setMatchingIds] = useState<string[]>([]);
+  const [searchPerformed, setSearchPerformed] = useState(false);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -34,20 +36,21 @@ const Home = () => {
 
   const searchAircraft = (ids: string[]) => {
     setMatchingIds(ids);
-    setCurrentPage(1); // Reset current page to 1 when a new search is performed
+    setCurrentPage(1);
   };
 
   const clearSearch = () => {
     setMatchingIds([]);
-    setCurrentPage(1); // Reset current page to 1 when the search bar is cleared
   };
 
   return (
     <div className="font-serif" ref={containerRef}>
       <Header />
-      <div className="max-w-[1000px] bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] mx-auto my-5 p-5 rounded-[5px]">
-        <SearchBar onSearch={searchAircraft} onClearSearch={clearSearch} />
-        <AircraftList aircraftData={visibleAircraftData} matchingIds={matchingIds} />
+      <div className="max-w-[1000px] bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] mx-auto my-5 p-5 rounded-[5px] min-h-[78vh] flex flex-col">
+        <div className="flex-grow">
+          <SearchBar onSearch={searchAircraft} onClearSearch={clearSearch} />
+          <AircraftList aircraftData={visibleAircraftData} matchingIds={matchingIds} />
+        </div>
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
