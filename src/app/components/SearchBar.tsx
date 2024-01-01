@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBar: React.FC = () => {
     return (
-        <div className="text-center mt-5">
+        <div className="flex items-center justify-center mt-5">
             <input
                 type="text"
                 id="searchInput"
@@ -16,9 +16,7 @@ const SearchBar: React.FC = () => {
                 Search
             </button>
         </div>
-
     );
 }
 
 export default SearchBar;
-
