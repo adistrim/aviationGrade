@@ -9,7 +9,7 @@ interface PaginationProps {
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPrevClick, onNextClick }) => {
   return (
-    <div className="text-center mb-2">
+    <div className="text-center text-sm md:text-base mb-2">
       <button className='inline-block bg-[#333] text-white no-underline mx-[5px] my-0 px-2.5 py-[3px] rounded-[5px] hover:bg-[#555] float-left' id="prevPage" onClick={onPrevClick} disabled={currentPage === 1}>
         Previous
       </button>
