@@ -3,18 +3,24 @@ import AircraftCard from './AircraftCard';
 
 interface AircraftListProps {
   aircraftData: {
+    id: string;
     imageSrc: string;
     aircraftName: string;
     description: string;
   }[];
+  matchingIds: string[];
 }
 
-const AircraftList: React.FC<AircraftListProps> = ({ aircraftData }) => {
+const AircraftList: React.FC<AircraftListProps> = ({ aircraftData, matchingIds }) => {
+  const filteredAircrafts = matchingIds.length > 0
+    ? aircraftData.filter((aircraft) => matchingIds.includes(aircraft.id))
+    : aircraftData;
+
   return (
     <div className="cards">
-      {aircraftData.map((aircraft, index) => (
+      {filteredAircrafts.map((aircraft) => (
         <AircraftCard
-          key={index}
+          key={aircraft.id}
           imageSrc={aircraft.imageSrc}
           aircraftName={aircraft.aircraftName}
           description={aircraft.description}
