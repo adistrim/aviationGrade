@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import aircraftData from "../data.json";
-import AircraftList from "./AircraftList";
 
 interface SearchBarProps {
     onSearch: (ids: string[]) => void;
@@ -13,11 +12,21 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, onClearSearch }) => {
 
     const searchAircraft = () => {
         const matchingIds = aircraftData
-            .filter((aircraft) =>
-                aircraft.aircraftName.toLowerCase().includes(searchTerm.toLowerCase())
-            )
+            .filter((aircraft) => {
+                const nameMatch = aircraft.aircraftName.toLowerCase().includes(searchTerm.toLowerCase());
+                const metadataMatch = Object.values(aircraft.metadata || {}).some(
+                    (value) =>
+                        typeof value === "string" &&
+                        value.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+                const otherNamesMatch = (aircraft.metadata?.othernames || [])
+                    .map((name) => name.toLowerCase())
+                    .includes(searchTerm.toLowerCase());
+    
+                return nameMatch || metadataMatch || otherNamesMatch;
+            })
             .map((matchingAircraft) => matchingAircraft.id);
-
+    
         setMatchingIds(matchingIds);
         onSearch(matchingIds);
     };
