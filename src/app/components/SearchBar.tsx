@@ -27,20 +27,26 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, onClearSearch }) => {
             setMatchingIds([]);
             onSearch([]);
             onClearSearch();
-          } else {
+        } else {
             searchAircraft();
-          }
+        }
     };
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
             handleSearchButtonClick();
         }
-      };
+    };
+
+    const handleClearButtonClick = () => {
+        setSearchTerm("");
+        setMatchingIds([]);
+        onClearSearch();
+    };
 
     return (
         <div>
-            <div className="flex items-center justify-center mt-5">
+            <div className="flex flex-row text-sm md:text-base items-center justify-center mt-3 md:mt-5">
                 <input
                     type="text"
                     id="searchInput"
@@ -48,14 +54,21 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, onClearSearch }) => {
                     value={searchTerm}
                     onKeyDown={handleKeyDown}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-[70%] border p-1.5 rounded-[5px] border-solid border-[#ccc]"
+                    className="w-[100%] md:w-[70%] border p-1.5 rounded-[5px] border-solid border-[#ccc]"
                 />
                 <button
                     id="searchButton"
                     onClick={handleSearchButtonClick}
-                    className="bg-[#333] text-white cursor-pointer px-5 py-1.5 rounded-[5px] border-[none] hover:bg-[#555] ml-2"
+                    className="bg-[#333] text-white cursor-pointer px-3 md:px-5 py-1.5 rounded-[5px] border-[none] hover:bg-[#555] ml-2"
                 >
                     Search
+                </button>
+                <button
+                    id="clearButton"
+                    onClick={handleClearButtonClick}
+                    className="bg-[#ccc] text-[#333] cursor-pointer px-2 md:px-3 py-1.5 rounded-[5px] border-[none] hover:bg-[#ddd] ml-2"
+                >
+                    Clear
                 </button>
             </div>
         </div>

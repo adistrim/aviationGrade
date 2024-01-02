@@ -8,7 +8,6 @@ import Pagination from './components/Pagination';
 import aircaftData from './data.json';
 
 const aircraftData = aircaftData;
-const allAircraftIds = aircaftData.map((aircraft) => aircraft.id);
 
 const Home = () => {
   const cardsPerPage = 10;
@@ -16,7 +15,6 @@ const Home = () => {
   const totalPages = Math.ceil(aircraftData.length / cardsPerPage);
   const containerRef = useRef<HTMLDivElement>(null);
   const [matchingIds, setMatchingIds] = useState<string[]>([]);
-  const [searchPerformed, setSearchPerformed] = useState(false);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -46,7 +44,7 @@ const Home = () => {
   return (
     <div className="font-serif" ref={containerRef}>
       <Header />
-      <div className="max-w-[1000px] bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] mx-auto my-5 p-5 rounded-[5px] min-h-[78vh] flex flex-col">
+      <div className="max-w-[1000px] bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] mx-auto my-0 lg:my-5 p-3 md:p-5 rounded-[5px] min-h-[78vh] flex flex-col">
         <div className="flex-grow">
           <SearchBar onSearch={searchAircraft} onClearSearch={clearSearch} />
           <AircraftList aircraftData={visibleAircraftData} matchingIds={matchingIds} />
